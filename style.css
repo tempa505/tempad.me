@@ -1,51 +1,69 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #fafafa;
-  color: #111;
-  line-height: 1.7;
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
 }
 
-nav {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 20px;
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  z-index: 10;
+}
+
+.nav ul {
+  list-style: none;
   display: flex;
-  justify-content: space-between;
+  gap: 32px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+/* Hero section */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("myweb.png") center / cover no-repeat;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.logo {
+/* Center text */
+.hero-content {
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
   font-weight: 600;
-  text-decoration: none;
-  color: #111;
+  letter-spacing: -1px;
 }
 
-.links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #555;
-}
-
-main {
-  max-width: 700px;
-  margin: 100px auto;
-  padding: 0 20px;
-}
-
-h1 {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-}
-
-footer {
-  max-width: 700px;
-  margin: 80px auto 40px;
-  padding: 0 20px;
-  color: #777;
-  font-size: 0.9rem;
+.hero-content p {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.85;
 }
