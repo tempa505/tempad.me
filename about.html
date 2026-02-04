@@ -2,34 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — Tempa</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Tempa Dorji</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: url("myweb.png") no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* dark cinematic overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+    .about-card {
+      position: relative;
+      z-index: 1;
+      width: 85%;
+      max-width: 1100px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      display: flex;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    }
+
+    .about-image {
+      flex: 1;
+      min-height: 450px;
+      background: url("profile.JPG") no-repeat center center/cover;
+    }
+
+    .about-content {
+      flex: 1.4;
+      padding: 50px;
+      color: #111;
+    }
+
+    .about-content h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .about-content h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 35px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #444;
+    }
+
+    .about-content p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-card {
+        flex-direction: column;
+      }
+
+      .about-image {
+        height: 300px;
+      }
+
+      .about-content {
+        padding: 35px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <nav>
-    <a href="index.html" class="logo">Tempa</a>
-    <div class="links">
-      <a href="about.html">About</a>
+
+  <div class="about-card">
+
+    <div class="about-image"></div>
+
+    <div class="about-content">
+      <h1>Tempa Dorji</h1>
+
+      <p>
+        I'm a computer science student and creative builder drawn to the space where logic meets art.
+        I enjoy turning ideas into experiences, whether that's through code, design, or storytelling.
+        My work is inspired by simplicity, culture, and emotion, with a constant curiosity for how
+        technology can feel more human.
+      </p>
+
+      <h2>Education & Background</h2>
+
+      <p>
+        I'm a Computer Science major with a Data Science minor, and a proud alumna of UWC Red Cross Nordic
+        in Norway, where I learned that fjords are beautiful, but winter darkness is very real.
+      </p>
+
+      <p>
+        I come from a small village in Bhutan, where the pace of life moves with the seasons, prayer flags
+        flutter in mountain winds, and the internet... well, let's just say it arrives fashionably late.
+        Growing up there, technology felt like something from another world, distant, almost mythical.
+        But that contrast is what fuels me now, bridging the quiet wisdom of my roots with the buzzing
+        possibilities of the digital age.
+      </p>
+
+      <p>
+        It's a strange and wonderful thing to come from a place where community is everything and
+        connectivity meant walking to your neighbor's house, and now to be building in a world where
+        a line of code can reach millions.
+      </p>
     </div>
-  </nav>
 
-  <main>
-    <h1>About me</h1>
-    <p>
-      I’m Tempa, originally from Bhutan and currently studying computer science.
-      I’m interested in technology, problem solving, and building things that
-      feel thoughtful and useful.
-    </p>
+  </div>
 
-    <p>
-      This website is a small space where I keep track of ideas, projects,
-      and things I’m learning along the way.
-    </p>
-  </main>
-
-  <footer>
-    <p>© 2026 Tempa</p>
-  </footer>
 </body>
 </html>
