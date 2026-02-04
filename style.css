@@ -128,6 +128,14 @@ html, body {
 }
 
 /* Blog Page */
+/* Blog page background */
+body {
+  background-image: url("myweb.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 /* Blog Flash Card Grid */
 .blog-grid {
   max-width: 900px;              /* limits total width */
