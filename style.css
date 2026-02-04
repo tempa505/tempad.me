@@ -130,13 +130,20 @@ html, body {
 /* Blog Page */
 /* Blog Flash Card Grid */
 .blog-grid {
-  max-width: 1100px;
-  margin: 80px auto;
+  max-width: 900px;              /* limits total width */
+  margin: 80px auto;             /* centers the grid */
   padding: 0 20px;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* always 2 columns on desktop */
   gap: 30px;
+}
+
+/* Responsive: 1 column on small screens */
+@media (max-width: 700px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Flash Card */
