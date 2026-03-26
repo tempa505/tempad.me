@@ -4,103 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Tempa Dorji</title>
-   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BT46Y177QJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-BT46Y177QJ');
-  </script>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
     }
 
     body {
-      height: 100vh;
-      background: url("myweb.png") no-repeat center center/cover;
+      background: #f5f5f5;
+      font-family: 'Inter', sans-serif;
+      color: #333;
       display: flex;
-      align-items: center;
       justify-content: center;
+      padding: 60px 20px;
     }
 
-    /* dark cinematic overlay */
-    body::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: 0;
+    .container {
+      max-width: 900px;
+      width: 100%;
     }
 
-    .about-card {
-      position: relative;
-      z-index: 1;
-      width: 85%;
-      max-width: 1100px;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
+    .top-section {
       display: flex;
-      overflow: hidden;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 40px;
     }
 
-    .about-image {
-      flex: 1;
-      min-height: 450px;
-      background: url("profile.JPG") no-repeat center center/cover;
+    .profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      background: url("profile.JPG") center/cover no-repeat;
     }
 
-    .about-content {
-      flex: 1.4;
-      padding: 50px;
-      color: #111;
-    }
-
-    .about-content h1 {
-      font-size: 2.4rem;
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
       font-weight: 700;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #555;
+      max-width: 600px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #ddd;
+      margin: 40px 0;
+    }
+
+    h2 {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: #666;
       margin-bottom: 20px;
     }
 
-    .about-content h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-top: 35px;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 18px;
       color: #444;
     }
 
-    .about-content p {
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 16px;
-      color: #333;
+    .quote {
+      border-left: 3px solid #ccc;
+      padding-left: 15px;
+      font-style: italic;
+      font-size: 1.2rem;
+      margin: 25px 0;
+      color: #222;
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .about-card {
+    @media (max-width: 700px) {
+      .top-section {
         flex-direction: column;
+        align-items: flex-start;
       }
 
-      .about-image {
-        height: 300px;
-      }
-
-      .about-content {
-        padding: 35px;
+      h1 {
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -108,44 +102,39 @@
 
 <body>
 
-  <div class="about-card">
+  <div class="container">
 
-    <div class="about-image"></div>
-
-    <div class="about-content">
-      <h1>Tempa Dorji</h1>
-
-      <p>
-        I'm a computer science student and creative builder drawn to the space where logic meets art.
-        I enjoy turning ideas into experiences, whether that's through code, design, or storytelling.
-        My work is inspired by simplicity, culture, and emotion, with a constant curiosity for how
-        technology can feel more human.
-      </p>
-
-      <h2>Education & Background</h2>
-
-      <p>
-        I'm a Computer Science major with a Data Science minor, and a proud alumna of UWC Red Cross Nordic
-        in Norway, where I learned that fjords are beautiful, but winter darkness is very real.
-      </p>
-
-      <p>
-        I come from a small village in Bhutan, where the pace of life moves with the seasons, prayer flags
-        flutter in mountain winds, and the internet... well, let's just say it arrives fashionably late.
-        Growing up there, technology felt like something from another world, distant, almost mythical.
-        But that contrast is what fuels me now: bridging the quiet wisdom of my roots with the buzzing
-        possibilities of the digital age.
-      </p>
-
-      <p>
-        It's a strange and wonderful thing to come from a place where community is everything and
-        connectivity meant walking to your neighbor's house, and now to be building in a world where
-        a line of code can reach millions.
-      </p>
+    <div class="top-section">
+      <div class="profile"></div>
+      <div>
+        <h1>Tempa Dorji</h1>
+        <p class="intro">
+          A computer science student and creative builder drawn to the space where logic meets art, turning ideas into experiences through code, design, and storytelling.
+        </p>
+      </div>
     </div>
+
+    <div class="divider"></div>
+
+    <h2>EDUCATION & BACKGROUND</h2>
+
+    <p>
+      CS major with a Data Science minor. Proud alumna of UWC Red Cross Nordic in Norway, where I learned that fjords are beautiful, but winter darkness is very real.
+    </p>
+
+    <div class="quote">
+      I come from a small village in Bhutan, where the internet arrives fashionably late.
+    </div>
+
+    <p>
+      Growing up there, technology felt distant, almost mythical. Prayer flags in mountain winds, seasons setting the pace of life. That contrast is what fuels me now, bridging the quiet wisdom of my roots with the buzzing possibilities of the digital age.
+    </p>
+
+    <p>
+      It is a strange and wonderful thing to come from a place where community is everything, and now to be building in a world where a line of code can reach millions.
+    </p>
 
   </div>
 
 </body>
 </html>
-
